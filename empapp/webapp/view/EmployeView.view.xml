@@ -1,0 +1,7 @@
+<mvc:View controllerName="com.demo.empapp.controller.EmployeView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <Text text="Hello this is employee view"></Text>
+    </Page>
+</mvc:View>
