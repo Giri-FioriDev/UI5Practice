@@ -1,7 +1,15 @@
 <mvc:View controllerName="com.demo.empapp.controller.EmployeView"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    <Text text="Hello this is employee view"></Text>
+    <Page id="page1" title="{i18n>title}" titleAlignment="Center" showNavButton="true"  navButtonPress="onNavBack">
+    <content>
+    <Text text="Hello this is employee view" ></Text>
+    </content>
+    <footer>
+        <Toolbar >
+        <ToolbarSpacer />
+        <Button text="Show Details" type="Emphasized" press="onNavigateToDetails"></Button>
+        </Toolbar>
+    </footer>
     </Page>
 </mvc:View>

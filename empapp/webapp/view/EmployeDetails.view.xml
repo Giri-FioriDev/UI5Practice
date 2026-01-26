@@ -1,0 +1,7 @@
+<mvc:View controllerName="com.demo.empapp.controller.EmployeDetails"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page2" title="Employee Details" titleAlignment="Center" showNavButton="true" navButtonPress="onNavBack">
+    <Text text="Hello this is employee Details"></Text>
+    </Page>
+</mvc:View>

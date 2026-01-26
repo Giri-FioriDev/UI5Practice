@@ -18,6 +18,7 @@
   },
   "sap.ui": {
     "technology": "UI5",
+    "fullWidth": true,
     "icons": {
       "icon": "",
       "favIcon": "",
@@ -75,9 +76,16 @@
       "routes": [
         {
           "name": "RouteEmployeView",
-          "pattern": ":?query:",
+          "pattern": "",
           "target": [
             "TargetEmployeView"
+          ]
+        },
+        {
+          "name": "RouteEmployeDetails",
+          "pattern": "details",
+          "target": [
+            "TargetEmployeDetails"
           ]
         }
       ],
@@ -85,6 +93,10 @@
         "TargetEmployeView": {
           "id": "EmployeView",
           "name": "EmployeView"
+        },
+         "TargetEmployeDetails": {
+          "id": "EmployeDetails",
+          "name": "EmployeDetails"
         }
       }
     },
