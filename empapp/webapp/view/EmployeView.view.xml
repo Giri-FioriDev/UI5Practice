@@ -1,9 +1,29 @@
 <mvc:View controllerName="com.demo.empapp.controller.EmployeView"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page1" title="{i18n>title}" titleAlignment="Center" showNavButton="true"  navButtonPress="onNavBack">
-    <content>
-    <Text text="Hello this is employee view" ></Text>
+    <Page id="page1" titleAlignment="Center" showNavButton="true"  navButtonPress="onNavBack">
+    <content>       
+        <Table items="{oEmpModel>/EmployeeSet}">
+            <headerToolbar>
+                 <Toolbar>
+                    <Title text="Emplyee List"></Title>
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column>
+                    <Text text="Employee Id"></Text>
+                </Column>
+                <Column >
+                    <Text text="Name"></Text>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem vAlign="Middle">
+                    <Text text="{oEmpModel>Empid}"></Text>
+                    <Text text="{oEmpModel>Name}"></Text>
+                </ColumnListItem>
+            </items>
+        </Table>
     </content>
     <footer>
         <Toolbar >

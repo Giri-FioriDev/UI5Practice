@@ -15,6 +15,12 @@ server:
             - /resources
             - /test-resources
           url: https://ui5.sap.com
+        backend:
+          - url: http://49.206.197.10:8034
+            client: '100'
+            authenticationType: BasicAuthentication
+            destination: Training
+            path: /sap
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
