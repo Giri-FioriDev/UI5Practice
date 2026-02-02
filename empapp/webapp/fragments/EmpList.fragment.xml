@@ -1,0 +1,27 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"> 
+<List items="{oViewModel>/EmployeeItems}">
+        <headerToolbar>
+            <Toolbar>
+                <Title text="{i18n>title}"></Title>
+                <ToolbarSpacer />
+                <Text text="({= ${oViewModel>/EmployeeItems}.length })" />
+            </Toolbar>
+        </headerToolbar>
+        <items>
+            <ObjectListItem title="{oViewModel>Name}" number="{oViewModel>Salary}" numberUnit="INR">
+                <attributes>
+                    <ObjectAttribute title="{i18n>col.empid}" text="{oViewModel>Empid}"></ObjectAttribute>
+                    <ObjectAttribute title="{i18n>col.desig}" text="{oViewModel>Desig}"></ObjectAttribute>
+                    <ObjectAttribute title="{i18n>col.skill}" text="{oViewModel>Skill}"></ObjectAttribute>
+                </attributes>
+                <firstStatus>
+                    <ObjectStatus class="statusAlign" text="{oViewModel>Status}" state="{path:'oViewModel>Status', formatter:'.formatter.formatStatusState'}" inverted="true"></ObjectStatus>
+                </firstStatus>
+                <secondStatus>
+                    <ObjectStatus title="{i18n>col.rating}" text="{path:'oViewModel>Rating', formatter:'.formatter.formatRating'}"></ObjectStatus>
+                </secondStatus>
+              
+            </ObjectListItem>
+        </items>
+</List>
+</core:FragmentDefinition>

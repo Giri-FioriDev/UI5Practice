@@ -1,0 +1,80 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:ui="sap.ui.table">
+<ui:Table rows="{oViewModel>/EmployeeItems}"
+    selectionMode="MultiToggle" visibleRowCount = "{oViewModel>/EmployeeItems/length}"
+    width="100%"	ariaLabelledBy="title">
+		<ui:extension>
+			<OverflowToolbar style="Standard">
+				<Title id="title" text="Employee ({oViewModel>/EmployeeItems/length})"/>
+			</OverflowToolbar>
+		</ui:extension>
+    <ui:columns>
+        <ui:Column width="5%">
+            <Label text="{i18n>col.empid}"/>
+            <ui:template>
+                <Text text="{oViewModel>Empid}"/>
+            </ui:template>
+        </ui:Column>
+        <ui:Column width="10%">
+            <Label text="{i18n>col.name}"/>
+            <ui:template>
+                <Text text="{oViewModel>Name}" wrapping="true" maxLines="2"/>
+            </ui:template>
+        </ui:Column>
+        <ui:Column width="8%">
+            <Label text="{i18n>col.desig}"/>
+            <ui:template>
+                <Text text="{oViewModel>Desig}" wrapping="true" maxLines="2"/>
+            </ui:template>
+        </ui:Column>
+        <ui:Column width="5%">
+            <Label text="{i18n>col.skill}"/>
+            <ui:template>
+                <Text text="{oViewModel>Skill}"/>
+            </ui:template>
+        </ui:Column>
+        <ui:Column width="12%">
+            <Label text="{i18n>col.email}"/>
+            <ui:template>
+                <Text text="{oViewModel>Email}" wrapping="true" maxLines="2"/>
+            </ui:template>
+        </ui:Column>
+        <ui:Column width="7%">
+            <Label text="{i18n>col.status}"/>
+            <ui:template>
+                <ObjectStatus class="statusAlign" text="{oViewModel>Status}" state="{path:'oViewModel>Status', formatter:'.formatter.formatStatusState'}" inverted="true"></ObjectStatus>
+            </ui:template>
+        </ui:Column>
+        <ui:Column width="6%">
+            <Label text="{i18n>col.salary}"/>
+            <ui:template>
+                <Text text="₹{oViewModel>Salary}"/>
+            </ui:template>
+        </ui:Column>
+        <ui:Column width="3%">
+            <Label text="{i18n>col.jlevel}"/>
+            <ui:template>
+                <Text text="{oViewModel>Jlevel}"/>
+            </ui:template>
+        </ui:Column>
+        <ui:Column width="7%">
+            <Label text="{i18n>col.location}"/>
+            <ui:template>
+                <Text text="{oViewModel>Location}" wrapping="true" maxLines="2"/>
+            </ui:template>
+        </ui:Column>
+        <ui:Column width="8%">
+            <Label text="{i18n>col.rating}"/>
+            <ui:template>
+                 <RatingIndicator value="{oViewModel>Rating}" editable="false" tooltip="{path:'oViewModel>Rating', formatter:'.formatter.formatRating'}"></RatingIndicator>
+            </ui:template> 
+        </ui:Column>
+        <ui:Column width="5%">
+            <Label text="{i18n>col.project}"/>
+            <ui:template>
+                <Text text="{oViewModel>Project}" wrapping="true" maxLines="2"/>
+            </ui:template>
+        </ui:Column>
+    </ui:columns>
+</ui:Table>
+
+</core:FragmentDefinition>

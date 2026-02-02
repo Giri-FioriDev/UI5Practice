@@ -68,6 +68,10 @@
         "dataSource": "mainService",
         "preload": true,
         "settings": {}
+      },
+      "oViewModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {}
       }
     },
     "resources": {

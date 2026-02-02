@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"> 
+<List items="{oViewModel>/EmployeeItems}">
+        <headerToolbar>
+            <Toolbar>
+                <Title text="{i18n>title}"></Title>
+                <ToolbarSpacer />
+                <Text text="({= ${oViewModel>/EmployeeItems}.length })" />
+            </Toolbar>
+        </headerToolbar>
+        <items>
+            <CustomListItem>
+                <HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiTinyMargin">
+                    <VBox>
+                        <Title level="H4" text="{oViewModel>Name}" />
+                        <HBox>
+                            <Text text="{= ${i18n>col.empid} + ': ' + ${oViewModel>Empid} }" class="sapUiSmallMarginEnd" />
+                            <Text text="{= ${i18n>col.desig} + ': ' + ${oViewModel>Desig} }" class="sapUiSmallMarginEnd" />
+                            <Text text="{= ${i18n>col.skill} + ': ' + ${oViewModel>Skill} }" />
+                        </HBox>
+                    </VBox>
+                    <VBox >
+                        <ObjectStatus class="sapUiSmallMargin" text="{oViewModel>Status}" state="{path:'oViewModel>Status', formatter:'.formatter.formatStatusState'}" inverted="true" />
+                        <RatingIndicator value="{oViewModel>Rating}" editable="false" tooltip="{path:'oViewModel>Rating', formatter:'.formatter.formatRating'}" maxValue="5" />
+                    </VBox>
+                </HBox>
+            </CustomListItem>
+        </items>
+</List>
+</core:FragmentDefinition>

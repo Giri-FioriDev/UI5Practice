@@ -1,29 +1,28 @@
 <mvc:View controllerName="com.demo.empapp.controller.EmployeView"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
     xmlns="sap.m">
-    <Page id="page1" titleAlignment="Center" showNavButton="true"  navButtonPress="onNavBack">
-    <content>       
-        <Table items="{oEmpModel>/EmployeeSet}">
-            <headerToolbar>
-                 <Toolbar>
-                    <Title text="Emplyee List"></Title>
-                </Toolbar>
-            </headerToolbar>
-            <columns>
-                <Column>
-                    <Text text="Employee Id"></Text>
-                </Column>
-                <Column >
-                    <Text text="Name"></Text>
-                </Column>
-            </columns>
-            <items>
-                <ColumnListItem vAlign="Middle">
-                    <Text text="{oEmpModel>Empid}"></Text>
-                    <Text text="{oEmpModel>Name}"></Text>
-                </ColumnListItem>
-            </items>
-        </Table>
+    <Page id="page1" title="Employee Management App" titleAlignment="Center">
+    <content>
+   	<IconTabBar
+		expanded="true"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text=" Employee Table (sap.m)" key="mTable">
+                <core:Fragment fragmentName="com.demo.empapp.fragments.EmpMTable" type="XML"/>
+			</IconTabFilter>
+			<IconTabFilter text="Employee Table (sap.ui.table)" key="attachments">
+				<core:Fragment fragmentName="com.demo.empapp.fragments.EmpUITable" type="XML"/>
+			</IconTabFilter>
+            <IconTabFilter text="Employee List (sap.m)" key="listView">
+				<core:Fragment fragmentName="com.demo.empapp.fragments.EmpList" type="XML"/>
+			</IconTabFilter>
+              <IconTabFilter text="Employee Custom List (sap.m)" key="customListView">
+				<core:Fragment fragmentName="com.demo.empapp.fragments.EmpCustomList" type="XML"/>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+     
     </content>
     <footer>
         <Toolbar >

@@ -1,11 +1,10 @@
 sap.ui.define([
-  "sap/ui/core/mvc/Controller"
+  "com/demo/empapp/controller/BaseController"
 ], (BaseController) => {
   "use strict";
 
   return BaseController.extend("com.demo.empapp.controller.App", {
       onInit() {
-        
       }
   });
 });

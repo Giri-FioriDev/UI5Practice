@@ -1,14 +1,10 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
-], (Controller) => {
+    "com/demo/empapp/controller/BaseController"
+], (BaseController) => {
     "use strict";
 
-    return Controller.extend("com.demo.empapp.controller.EmployeDetails", {
+    return BaseController.extend("com.demo.empapp.controller.EmployeDetails", {
         onInit() {
-        },
-        onNavBack() {
-            var oRouter = this.getOwnerComponent().getRouter();
-            oRouter.navTo("RouteEmployeView");
         }
     });
 });
