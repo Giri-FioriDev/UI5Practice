@@ -72,6 +72,11 @@
       "oViewModel": {
         "type": "sap.ui.model.json.JSONModel",
         "settings": {}
+      },
+      "oLocalModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/oLocalData.json",
+        "settings": {}
       }
     },
     "resources": {

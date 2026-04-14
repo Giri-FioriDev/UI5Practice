@@ -1,0 +1,13 @@
+{
+    "oStatusData": [
+        {
+            "status": "CONFIRMED"
+        },
+        {
+            "status": "PROHIBITION"
+        },
+        {
+            "status": "ON NOTICE"
+        }
+    ]
+}
